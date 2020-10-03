@@ -6,6 +6,8 @@
             <aside class="col-sm-4">
                 {{-- ユーザ情報 --}}
                 @include('users.card')
+                {{-- お気に入り一覧へのリンク --}}
+                <a href="{{ route('users.favorites', ['id' => Auth::id()]) }}" class="mt-2 btn btn-success btn-block">Show Your Favorites</a>
             </aside>
             <div class="col-sm-8">
                 {{-- 投稿フォーム --}}
